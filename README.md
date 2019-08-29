@@ -13,7 +13,7 @@ Estos fueron creados con Web Services en Java.
 
 El orden indicado, para consumir estos servicios fue el siguiente:
 
-![Modelo BPEL](bpel.png)
+![Modelo BPEL](bpel.PNG)
 
 
 ##Herramienta de Software Utilizada
