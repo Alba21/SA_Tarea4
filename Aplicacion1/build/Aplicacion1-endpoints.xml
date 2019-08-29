@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<endpoints xmlns="http://xml.netbeans.org/schema/endPoints" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.netbeans.org/schema/endPoints endPoints.xsd">
+    <project>
+        <name>Aplicacion1</name>
+        <version>1.0</version>
+        <description>description</description>
+    </project>
+    <team>
+        <name>unknown team</name>
+        <contact>no contact provided</contact>
+    </team>
+    <endpoint>
+        <type>provider</type>
+        <endpoint-name>WS_ClientePortTypeRole_myRole</endpoint-name>
+        <service-name>
+            <namespace>http://enterprise.netbeans.org/bpel/SOA_BPEL/SOA_BPEL</namespace>
+            <localname>PartnerLink1</localname>
+        </service-name>
+        <interface-name>
+            <namespace>http://j2ee.netbeans.org/wsdl/SOA_BPEL/src/WS_Cliente</namespace>
+            <localname>WS_ClientePortType</localname>
+        </interface-name>
+        <description>description of the service provided or consumed through this endPoint</description>
+    </endpoint>
+    <endpoint>
+        <type>consumer</type>
+        <endpoint-name>ClienteRole_partnerRole</endpoint-name>
+        <service-name>
+            <namespace>http://enterprise.netbeans.org/bpel/SOA_BPEL/SOA_BPEL</namespace>
+            <localname>PartnerLink2</localname>
+        </service-name>
+        <interface-name>
+            <namespace>http://ws.cliente/</namespace>
+            <localname>Cliente</localname>
+        </interface-name>
+        <description>description of the service provided or consumed through this endPoint</description>
+    </endpoint>
+    <endpoint>
+        <type>consumer</type>
+        <endpoint-name>RastreoRole_partnerRole</endpoint-name>
+        <service-name>
+            <namespace>http://enterprise.netbeans.org/bpel/SOA_BPEL/SOA_BPEL</namespace>
+            <localname>PartnerLink4</localname>
+        </service-name>
+        <interface-name>
+            <namespace>http://ws.rastreo/</namespace>
+            <localname>Rastreo</localname>
+        </interface-name>
+        <description>description of the service provided or consumed through this endPoint</description>
+    </endpoint>
+    <endpoint>
+        <type>consumer</type>
+        <endpoint-name>PilotoRole_partnerRole</endpoint-name>
+        <service-name>
+            <namespace>http://enterprise.netbeans.org/bpel/SOA_BPEL/SOA_BPEL</namespace>
+            <localname>PartnerLink3</localname>
+        </service-name>
+        <interface-name>
+            <namespace>http://ws.piloto/</namespace>
+            <localname>Piloto</localname>
+        </interface-name>
+        <description>description of the service provided or consumed through this endPoint</description>
+    </endpoint>
+</endpoints>

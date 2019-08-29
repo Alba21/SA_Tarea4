@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RastreoWrapper" targetNamespace="http://enterprise.netbeans.org/bpel/RastreoWrapper" xmlns:tns="http://enterprise.netbeans.org/bpel/RastreoWrapper" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:ns="http://ws.rastreo/">
+    <import location="http://localhost:32837/RastreoWS/Rastreo?wsdl" namespace="http://ws.rastreo/"/>
+    <plnk:partnerLinkType name="RastreoLinkType">
+        <plnk:role name="RastreoRole" portType="ns:Rastreo"/>
+    </plnk:partnerLinkType>
+</definitions>

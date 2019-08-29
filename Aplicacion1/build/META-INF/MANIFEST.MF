@@ -1,0 +1,4 @@
+Bundle-Name: Aplicacion1
+Bundle-SymbolicName: Aplicacion1
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0

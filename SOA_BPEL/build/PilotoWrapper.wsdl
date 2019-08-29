@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PilotoWrapper" targetNamespace="http://enterprise.netbeans.org/bpel/PilotoWrapper" xmlns:tns="http://enterprise.netbeans.org/bpel/PilotoWrapper" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:ns="http://ws.piloto/">
+    <import location="http://localhost:32837/PilotoWS/Piloto?wsdl" namespace="http://ws.piloto/"/>
+    <plnk:partnerLinkType name="PilotoLinkType">
+        <plnk:role name="PilotoRole" portType="ns:Piloto"/>
+    </plnk:partnerLinkType>
+</definitions>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <nextCatalog catalog="nbproject/private/retriever/catalog.xml"/>
+    <system systemId="http://localhost:32837/ClienteWS/Cliente?wsdl" uri="src/localhost_32837/ClienteWS/Cliente.wsdl"/>
+    <system systemId="http://localhost:32837/ClienteWS/Cliente?xsd=1" uri="src/localhost_32837/ClienteWS/Cliente.xsd_1.xsd"/>
+    <system systemId="http://localhost:32837/RastreoWS/Rastreo?wsdl" uri="src/localhost_32837/RastreoWS/Rastreo.wsdl"/>
+    <system systemId="http://localhost:32837/RastreoWS/Rastreo?xsd=1" uri="src/localhost_32837/RastreoWS/Rastreo.xsd_1.xsd"/>
+    <system systemId="http://localhost:32837/PilotoWS/Piloto?wsdl" uri="src/localhost_32837/PilotoWS/Piloto.wsdl"/>
+    <system systemId="http://localhost:32837/PilotoWS/Piloto?xsd=1" uri="src/localhost_32837/PilotoWS/Piloto.xsd_1.xsd"/>
+</catalog>

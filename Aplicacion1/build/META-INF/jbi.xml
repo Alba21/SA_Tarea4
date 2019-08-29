@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="Aplicacion1" xmlns:ns2="http://enterprise.netbeans.org/bpel/SOA_BPEL/SOA_BPEL" xmlns:ns3="http://ws.cliente/" xmlns:ns4="http://ws.rastreo/" xmlns:ns5="http://ws.piloto/" xmlns:ns6="http://j2ee.netbeans.org/wsdl/SOA_BPEL/src/WS_Cliente" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/jbi ./jbi.xsd">
+    <service-assembly>
+        <identification>
+            <name>Aplicacion1</name>
+            <description>Represents the Service Assembly of Aplicacion1</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>Aplicacion1-SOA_BPEL</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>SOA_BPEL.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>Aplicacion1-sun-http-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-http-binding.jar</artifacts-zip>
+                <component-name>sun-http-binding</component-name>
+            </target>
+        </service-unit>
+        <connections>
+            <connection>
+                <consumer endpoint-name="casaPort1" service-name="ns1:Aplicacion1Service1"/>
+                <provider endpoint-name="WS_ClientePortTypeRole_myRole" service-name="ns2:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="ClienteRole_partnerRole" service-name="ns2:PartnerLink2"/>
+                <provider endpoint-name="ClientePort" service-name="ns3:Cliente"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="RastreoRole_partnerRole" service-name="ns2:PartnerLink4"/>
+                <provider endpoint-name="RastreoPort" service-name="ns4:Rastreo"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="PilotoRole_partnerRole" service-name="ns2:PartnerLink3"/>
+                <provider endpoint-name="PilotoPort" service-name="ns5:Piloto"/>
+            </connection>
+        </connections>
+        <route-types xmlns="http://www.open-esb.net/xml/ns/jbi">
+            <source endpoint-name="casaPort1" mode="local" routing-rule="default" service-name="ns1:Aplicacion1Service1">direct</source>
+            <source endpoint-name="ClienteRole_partnerRole" mode="local" routing-rule="default" service-name="ns2:PartnerLink2">direct</source>
+            <source endpoint-name="RastreoRole_partnerRole" mode="local" routing-rule="default" service-name="ns2:PartnerLink4">direct</source>
+            <source endpoint-name="PilotoRole_partnerRole" mode="local" routing-rule="default" service-name="ns2:PartnerLink3">direct</source>
+        </route-types>
+        <interface-mapping xmlns="http://www.open-esb.net/xml/ns/jbi">
+            <implementation>
+                <by-provider endpoint-name="WS_ClientePortTypeRole_myRole" service-name="ns2:PartnerLink1"/>
+                <interface name="ns6:WS_ClientePortType"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="ClientePort" service-name="ns3:Cliente"/>
+                <interface name="ns3:Cliente"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="RastreoPort" service-name="ns4:Rastreo"/>
+                <interface name="ns4:Rastreo"/>
+            </implementation>
+            <implementation>
+                <by-provider endpoint-name="PilotoPort" service-name="ns5:Piloto"/>
+                <interface name="ns5:Piloto"/>
+            </implementation>
+        </interface-mapping>
+    </service-assembly>
+</jbi>

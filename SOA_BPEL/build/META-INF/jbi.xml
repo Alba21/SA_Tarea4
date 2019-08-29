@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/SOA_BPEL/SOA_BPEL" xmlns:ns1="http://ws.cliente/" xmlns:ns2="http://ws.rastreo/" xmlns:ns3="http://ws.piloto/" xmlns:ns4="http://j2ee.netbeans.org/wsdl/SOA_BPEL/src/WS_Cliente" xmlns:ns5="http://www.sun.com/jbi/descriptor/service-unit" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="WS_ClientePortTypeRole_myRole" interface-name="ns4:WS_ClientePortType" service-name="ns0:PartnerLink1">
+            <ns5:display-name>PartnerLink1</ns5:display-name>
+            <ns5:process-name>SOA_BPEL</ns5:process-name>
+            <ns5:file-path>SOA_BPEL.bpel</ns5:file-path>
+        </provides>
+        <consumes endpoint-name="ClienteRole_partnerRole" interface-name="ns1:Cliente" service-name="ns0:PartnerLink2">
+            <ns5:display-name>PartnerLink2</ns5:display-name>
+            <ns5:process-name>SOA_BPEL</ns5:process-name>
+            <ns5:file-path>SOA_BPEL.bpel</ns5:file-path>
+        </consumes>
+        <consumes endpoint-name="RastreoRole_partnerRole" interface-name="ns2:Rastreo" service-name="ns0:PartnerLink4">
+            <ns5:display-name>PartnerLink4</ns5:display-name>
+            <ns5:process-name>SOA_BPEL</ns5:process-name>
+            <ns5:file-path>SOA_BPEL.bpel</ns5:file-path>
+        </consumes>
+        <consumes endpoint-name="PilotoRole_partnerRole" interface-name="ns3:Piloto" service-name="ns0:PartnerLink3">
+            <ns5:display-name>PartnerLink3</ns5:display-name>
+            <ns5:process-name>SOA_BPEL</ns5:process-name>
+            <ns5:file-path>SOA_BPEL.bpel</ns5:file-path>
+        </consumes>
+    </services>
+</jbi>

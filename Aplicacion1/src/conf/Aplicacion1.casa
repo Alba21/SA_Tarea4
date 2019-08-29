@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://ws.cliente/" xmlns:ns2="http://ws.rastreo/" xmlns:ns3="http://ws.piloto/" xmlns:ns4="Aplicacion1" xmlns:ns5="http://j2ee.netbeans.org/wsdl/SOA_BPEL/src/WS_Cliente" xmlns:ns6="http://enterprise.netbeans.org/bpel/SOA_BPEL/SOA_BPEL" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="ClientePort" interface-name="ns1:Cliente" name="endpoint1" service-name="ns1:Cliente"/>
+        <endpoint endpoint-name="RastreoPort" interface-name="ns2:Rastreo" name="endpoint2" service-name="ns2:Rastreo"/>
+        <endpoint endpoint-name="PilotoPort" interface-name="ns3:Piloto" name="endpoint3" service-name="ns3:Piloto"/>
+        <endpoint endpoint-name="casaPort1" interface-name="ns5:WS_ClientePortType" name="endpoint4" service-name="ns4:Aplicacion1Service1"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="WS_ClientePortTypeRole_myRole" file-path="SOA_BPEL.bpel" interface-name="ns5:WS_ClientePortType" name="endpoint5" process-name="SOA_BPEL" service-name="ns6:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="ClienteRole_partnerRole" file-path="SOA_BPEL.bpel" interface-name="ns1:Cliente" name="endpoint6" process-name="SOA_BPEL" service-name="ns6:PartnerLink2"/>
+        <endpoint display-name="PartnerLink4" endpoint-name="RastreoRole_partnerRole" file-path="SOA_BPEL.bpel" interface-name="ns2:Rastreo" name="endpoint7" process-name="SOA_BPEL" service-name="ns6:PartnerLink4"/>
+        <endpoint display-name="PartnerLink3" endpoint-name="PilotoRole_partnerRole" file-path="SOA_BPEL.bpel" interface-name="ns3:Piloto" name="endpoint8" process-name="SOA_BPEL" service-name="ns6:PartnerLink3"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="SOA_BPEL.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="Aplicacion1-SOA_BPEL" unit-name="SOA_BPEL" unknown="false" x="160" y="99">
+            <provides endpoint="endpoint5"/>
+            <consumes endpoint="endpoint6"/>
+            <consumes endpoint="endpoint7"/>
+            <consumes endpoint="endpoint8"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="Aplicacion1-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port bindingType="soap" x="67" y="118">
+                    <link xlink:href="../jbiasa/Aplicacion1.wsdl#xpointer(/definitions/service[@name='Aplicacion1Service1']/port[@name='casaPort1'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint4"/>
+                    <provides endpoint="endpoint4"/>
+                </port>
+                <port x="67" y="276">
+                    <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/ClienteWS/Cliente.wsdl#xpointer(/definitions/service[@name='Cliente']/port[@name='ClientePort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port x="67" y="197">
+                    <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/PilotoWS/Piloto.wsdl#xpointer(/definitions/service[@name='Piloto']/port[@name='PilotoPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+                <port x="67" y="39">
+                    <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/RastreoWS/Rastreo.wsdl#xpointer(/definitions/service[@name='Rastreo']/port[@name='RastreoPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint4" mode="" provider="endpoint5" route-type="direct" routing-rule="" state="new"/>
+        <connection consumer="endpoint6" mode="" provider="endpoint1" route-type="" routing-rule="" state="unchanged"/>
+        <connection consumer="endpoint7" mode="" provider="endpoint2" route-type="" routing-rule="" state="unchanged"/>
+        <connection consumer="endpoint8" mode="" provider="endpoint3" route-type="" routing-rule="" state="unchanged"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiasa/Aplicacion1.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/Aplicacion1.wsdl#xpointer(/definitions/portType[@name='dummyCasaPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/ClienteWS/Cliente.wsdl#xpointer(/definitions/portType[@name='Cliente'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/PilotoWS/Piloto.wsdl#xpointer(/definitions/portType[@name='Piloto'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/RastreoWS/Rastreo.wsdl#xpointer(/definitions/portType[@name='Rastreo'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/WS_Cliente.wsdl#xpointer(/definitions/portType[@name='WS_ClientePortType'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiasa/Aplicacion1.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/Aplicacion1.wsdl#xpointer(/definitions/binding[@name='casaBinding1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/ClienteWS/Cliente.wsdl#xpointer(/definitions/binding[@name='ClientePortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/PilotoWS/Piloto.wsdl#xpointer(/definitions/binding[@name='PilotoPortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/RastreoWS/Rastreo.wsdl#xpointer(/definitions/binding[@name='RastreoPortBinding'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiasa/Aplicacion1.wsdl#xpointer(/definitions/service[@name='Aplicacion1Service1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/Aplicacion1.wsdl#xpointer(/definitions/service[@name='Aplicacion1Service1'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/ClienteWS/Cliente.wsdl#xpointer(/definitions/service[@name='Cliente'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/PilotoWS/Piloto.wsdl#xpointer(/definitions/service[@name='Piloto'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/SOA_BPEL/localhost_32837/RastreoWS/Rastreo.wsdl#xpointer(/definitions/service[@name='Rastreo'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>
