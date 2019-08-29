@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="ALBAPC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" skipped="0" tests="1" time="1.292" timestamp="2019-08-29T03:41:16">
+<testsuite errors="0" failures="0" hostname="ALBAPC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" skipped="0" tests="1" time="1.634" timestamp="2019-08-29T05:29:20">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="GT" />
@@ -56,7 +56,7 @@
     <property name="libs.Comet-GlassFish-v3.javadoc" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\albaj\OneDrive\Escritorio\SA\ESB\Aplicacion1\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\albaj\AppData\Local\Temp\junitvmwatcher4092742591923738851.properties propsfile=C:\Users\albaj\AppData\Local\Temp\junit3887669013142427801.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\albaj\OneDrive\Escritorio\SA\ESB\Aplicacion1\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\albaj\AppData\Local\Temp\junitvmwatcher3088868755135902291.properties propsfile=C:\Users\albaj\AppData\Local\Temp\junit388872056216534897.properties" />
     <property name="build.classes.dir" value="build/jar" />
     <property name="enterprise.module.install.dir" value="C:\OpenESB-SE-3.1.2.3-a\OE-Studio\enterprise\modules" />
     <property name="libs.javaee-endorsed-api-7.0.javadoc" value="C:\OpenESB-SE-3.1.2.3-a\OE-Studio\enterprise\docs\javaee-doc-api.jar" />
@@ -358,7 +358,7 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\OpenESB-SE-3.1.2.3-a\OE-Studio\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCase1" time="1.281" />
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCase1" time="1.617" />
   <system-out><![CDATA[GenerateATSOutput=${generate.ats.output}
 NetBeansUserDir=C:\Users\albaj\AppData\Roaming\.openesb_studio\3.1.2
 ServerPassword=admin
@@ -407,7 +407,7 @@ sun.cpu.endian=little
 sun.cpu.isalist=amd64
 sun.desktop=windows
 sun.io.unicode.encoding=UnicodeLittle
-sun.java.command=org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\albaj\OneDrive\Escritorio\SA\ESB\Aplicacion1\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\albaj\AppData\Local\Temp\junitvmwatcher4092742591923738851.properties propsfile=C:\Users\albaj\AppData\Local\Temp\junit3887669013142427801.properties
+sun.java.command=org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\albaj\OneDrive\Escritorio\SA\ESB\Aplicacion1\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\albaj\AppData\Local\Temp\junitvmwatcher3088868755135902291.properties propsfile=C:\Users\albaj\AppData\Local\Temp\junit388872056216534897.properties
 sun.java.launcher=SUN_STANDARD
 sun.jnu.encoding=Cp1252
 sun.management.compiler=HotSpot 64-Bit Tiered Compilers

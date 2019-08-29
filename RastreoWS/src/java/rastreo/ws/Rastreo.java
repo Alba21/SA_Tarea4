@@ -38,18 +38,30 @@ public class Rastreo {
     }
 
     public String rastrearCliente(String id) {
+        /*
+            Esta función busca la ubicación de un cliente
+            y llama a una función para ubicar un piloto cercano
+            de no encontrarlo devuelve -1
+        */
         System.out.println("inicio rastrear cliente");
         for (int i = 0; i < ubicaciones.size(); i++) {
             if (ubicaciones.get(i).id.equals(id) && ubicaciones.get(i).tipo.equals("C")) {
                 System.out.println("encontro al cliente");
-                return "1";
+                return rastrearPiloto(ubicaciones.get(i).ubicacion);
             }
         }
         System.out.println("error rastrear cliente");
-        return "1";
+        return "-1";
     }
 
     public String rastrearPiloto(String ubicacionCliente1) {
+        /*
+            Esta función busca el id de un piloto
+            dado que entra la ubicacion de un cliente
+            busca que el piloto este cerca de la ubicación del cliente
+        
+            de no encontrarlo devuelve -1
+        */
         int ubicacionCliente = Integer.parseInt(ubicacionCliente1);
         for (int i = 0; i < ubicaciones.size(); i++) {
             if(ubicaciones.get(i).tipo=="P"){

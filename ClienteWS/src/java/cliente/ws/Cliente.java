@@ -30,6 +30,12 @@ public class Cliente {
     }
     
     public String getId(String nombre){
+        /*
+            Esta función busca el id de un cliente
+            dado que entre el nombre del cliente registrado
+            de no encontrarlo devuelve -1
+        */
+        
         for(int i=0; i < clientes.size(); i++){
             if(clientes.get(i).nombre.equalsIgnoreCase(nombre)){
                 System.out.println("Cliente Retorna: " + clientes.get(i).id);

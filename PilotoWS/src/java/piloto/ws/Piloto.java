@@ -40,6 +40,12 @@ public class Piloto {
     }
 
     public String returnInfPiloto(String id) {
+        /*
+            Busca la información de un piloto
+            dado que entra su id.
+        De no encontrar uno, devuelve una cadena vacía.
+            
+        */
         System.out.println("Return piloto: "+id);
         for (int i = 0; i < listaPilotos.size(); i++) {
             if (listaPilotos.get(i).id.equals(id)) {
